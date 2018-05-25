@@ -1,0 +1,4 @@
+config BR2_PACKAGE_THINGYMCCONFIG
+	bool "thingymcconfig"
+	help
+	  Provisioning and configuration for Linux based things
