@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-THINGYMCCONFIG_VERSION = master
+THINGYMCCONFIG_VERSION = dev
 THINGYMCCONFIG_SITE = https://github.com/fifteenhex/thingymcconfig.git
 THINGYMCCONFIG_SITE_METHOD = git
 THINGYMCCONFIG_LICENSE = GPL-3.0
