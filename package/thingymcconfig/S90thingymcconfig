@@ -6,11 +6,11 @@
 start() {
 	printf "Starting thingymcconfig: "
 	start-stop-daemon -S -q -p /var/run/thingymcconfig.pid \
-		--exec /usr/sbin/thingymcconfig
+		--exec /usr/sbin/thingymcconfig -- -i mlan0
 	[ $? = 0 ] && echo "OK" || echo "FAIL"
 }
 stop() {
-	printf "Stopping thingymcconfig sshd: "
+	printf "Stopping thingymcconfig: "
 	start-stop-daemon -K -q -p /var/run/thingymcconfig.pid
 	[ $? = 0 ] && echo "OK" || echo "FAIL"
 }
