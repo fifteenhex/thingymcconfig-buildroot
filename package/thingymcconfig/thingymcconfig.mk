@@ -17,7 +17,7 @@ define THINGYMCCONFIG_BUILD_CMDS
 endef
 
 define THINGYMCCONFIG_INSTALL_TARGET_CMDS
-        $(INSTALL) -D -m 0755 $(@D)/thingymcconfig $(TARGET_DIR)/usr/bin/thingymcconfig
+        $(INSTALL) -D -m 0755 $(@D)/thingymcconfig $(TARGET_DIR)/usr/sbin/thingymcconfig
 endef
 
 $(eval $(generic-package))
