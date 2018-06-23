@@ -18,6 +18,7 @@ endef
 
 define THINGYMCCONFIG_INSTALL_TARGET_CMDS
         $(INSTALL) -D -m 0755 $(@D)/thingymcconfig $(TARGET_DIR)/usr/sbin/thingymcconfig
+	$(INSTALL) -D -m 0755 $(THINGYMCCONFIG_PKGDIR)/S90thingymcconfig $(TARGET_DIR)/etc/init.d/S90thingmcconfig
 endef
 
 $(eval $(generic-package))
