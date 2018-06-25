@@ -8,5 +8,7 @@ config BR2_PACKAGE_THINGYMCCONFIG
 	select BR2_PACKAGE_DHCP
 	select BR2_PACKAGE_DHCP_SERVER
 	select BR2_PACKAGE_DHCP_CLIENT
+	select BR2_PACKAGE_WPA_SUPPLICANT
+	select BR2_PACKAGE_WPA_SUPPLICANT_AP_SUPPORT
 	help
 	  Provisioning and configuration for Linux based things
