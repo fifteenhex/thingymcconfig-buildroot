@@ -4,5 +4,9 @@ config BR2_PACKAGE_THINGYMCCONFIG
 	select BR2_PACKAGE_LIBMICROHTTPD_SSL
 	select BR2_PACKAGE_JSON_GLIB
 	select BR2_PACKAGE_LIBNL
+	select BR2_PACKAGE_BUSYBOX_SHOW_OTHERS
+	select BR2_PACKAGE_DHCP
+	select BR2_PACKAGE_DHCP_SERVER
+	select BR2_PACKAGE_DHCP_CLIENT
 	help
 	  Provisioning and configuration for Linux based things
