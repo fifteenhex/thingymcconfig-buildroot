@@ -16,6 +16,7 @@ THINGYMCCONFIG_INSTALL_STAGING = YES
 THINGYMCCONFIG_CONF_OPTS += -Dwpasupplicantpath=/usr/sbin/wpa_supplicant
 
 define THINGYMCCONFIG_INSTALL_TARGET_CMDS
+	$(INSTALL) -D -m 0700 $(STAGING_DIR)/usr/sbin/thingymcconfig $(TARGET_DIR)/usr/sbin/thingymcconfig
 	$(INSTALL) -D -m 0755 $(THINGYMCCONFIG_PKGDIR)/S90thingymcconfig $(TARGET_DIR)/etc/init.d/S90thingmcconfig
 endef
 
