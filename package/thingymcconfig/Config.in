@@ -8,3 +8,10 @@ config BR2_PACKAGE_THINGYMCCONFIG
 	select BR2_PACKAGE_WPA_SUPPLICANT_AP_SUPPORT
 	help
 	  Provisioning and configuration for Linux based things
+
+config BR2_PACKAGE_THINGYMCCONFIG_INTERFACE
+	string "interface"
+	depends on BR2_PACKAGE_THINGYMCCONFIG
+	default "wlan0"
+	help
+	  Name of the interface that thingymcconfig should manage
