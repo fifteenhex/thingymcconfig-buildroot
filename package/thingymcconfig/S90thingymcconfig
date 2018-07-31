@@ -3,10 +3,14 @@
 # Starts thingymcconfig.
 #
 
+CONFIGDIR=/space/thingymcconfig
+CONFIGFILE=$CONFIGDIR/config.json
+
 start() {
 	printf "Starting thingymcconfig: "
+	mkdir -p $CONFIGDIR
 	start-stop-daemon -S -q -p /var/run/thingymcconfig.pid -b \
-		--exec /usr/sbin/thingymcconfig -- -i mlan0 -w
+		--exec /usr/sbin/thingymcconfig -- -i mlan0 -c $CONFIGFILE -w
 	[ $? = 0 ] && echo "OK" || echo "FAIL"
 }
 stop() {
