@@ -1,1 +1,2 @@
 source "$BR2_EXTERNAL_THINGYMCCONFIG_PATH/package/thingymcconfig/Config.in"
+source "$BR2_EXTERNAL_THINGYMCCONFIG_PATH/package/thingymcconfig-exampleapp/Config.in"
