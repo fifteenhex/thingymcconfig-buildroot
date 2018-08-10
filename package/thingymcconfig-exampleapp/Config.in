@@ -1,6 +1,7 @@
 config BR2_PACKAGE_THINGYMCCONFIG_EXAMPLEAPP
-	bool "example app"
+	bool "build example app"
 	depends on BR2_PACKAGE_THINGYMCCONFIG
+	select BR2_PACKAGE_LIBOPING
 	help
 	  Example application for thingymcconfig
 
