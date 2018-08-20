@@ -1,0 +1,40 @@
+#!/bin/sh
+#
+# Starts thingymcconfig example app
+#
+
+PID="/var/run/thingymcconfig-app.pid"
+
+start() {
+	printf "Starting thingymcconfig-app: "
+	mkdir -p $CONFIGDIR
+	start-stop-daemon -S -q -p $PID -b \
+		--exec /usr/bin/thingymcconfig-app
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+}
+stop() {
+	printf "Stopping thingymcconfig-app: "
+	start-stop-daemon -K -q -p $PID
+	[ $? = 0 ] && echo "OK" || echo "FAIL"
+}
+restart() {
+	stop
+	start
+}
+
+case "$1" in
+  start)
+  	start
+	;;
+  stop)
+  	stop
+	;;
+  restart|reload)
+  	restart
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
